@@ -1,4 +1,4 @@
-var Botkit = require('botkit')
+﻿var Botkit = require('botkit')
 
 // Expect a SLACK_TOKEN environment variable
 var slackToken = process.env.SLACK_TOKEN
@@ -34,6 +34,10 @@ controller.hears(['hello', 'hi'], ['direct_message'], function (bot, message) {
 controller.hears('.*', ['mention'], function (bot, message) {
   bot.reply(message, 'You really do care about me. :heart:')
 })
+
+controller.hears(['sinh to', 'sinh tố', 'nước', 'cà phê', 'cafe'], ['message_received'], function (bot, message) {
+  bot.reply(message, 'Số đây tự gọi đi nhé 090 6807915');
+});
 
 controller.hears('help', ['direct_message', 'direct_mention'], function (bot, message) {
   var help = 'I will respond to the following messages: \n' +
