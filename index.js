@@ -35,10 +35,16 @@ controller.hears('.*', ['mention'], function (bot, message) {
   bot.reply(message, 'You really do care about me. :heart:')
 })
 
-controller.hears(['sinh to', 'cafe', 'vnexpress.net'], ['ambient'], function (bot, message) {
+controller.hears(['sinh to', 'cafe', 'mua nước'], ['ambient'], function (bot, message) {
   console.log(bot);
   console.log(message);
   bot.reply(message, 'sinh to day tu goi di nhe 090 6807915');
+});
+
+controller.hears(['soha.vn', 'thanhnien.vn', 'tinhte.vn', 'genk.vn', 'news.zing.vn', 'vnexpress.net'], ['ambient'], function (bot, message) {
+  console.log(bot);
+  console.log(message);
+  bot.reply(message, 'Đừng có post báo vào đây nữa, post vào hotnew ấy!!!');
 });
 
 controller.hears('help', ['direct_message', 'direct_mention'], function (bot, message) {
