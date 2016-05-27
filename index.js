@@ -35,7 +35,7 @@ controller.hears('.*', ['mention'], function (bot, message) {
   bot.reply(message, 'You really do care about me. :heart:')
 })
 
-controller.hears(['.*', 'sinh to', 'cafe', 'vnexpress.net'], ['message_received'], function (bot, message) {
+controller.on(['message_received'], ['message_received'], function (bot, message) {
   console.log(bot);
   console.log(message);
   bot.reply(message, 'sinh to day tu goi di nhe 090 6807915');
