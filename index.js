@@ -28,7 +28,7 @@ controller.hears(['hello', 'hi'], ['direct_mention'], function (bot, message) {
 
 //controller.hears(['hello', 'hi'], ['direct_message'], function (bot, message) {
 //  bot.reply(message, 'Hello.')
-  bot.reply(message, 'It\'s nice to talk to you directly.')
+//  bot.reply(message, 'It\'s nice to talk to you directly.')
 //})
 
 //controller.hears('.*', ['mention'], function (bot, message) {
@@ -68,12 +68,12 @@ controller.hears(['facebook'], ['direct_mention', 'mention', 'direct_message'], 
 //    color: '#7CD197'
 //  }]
 
-  bot.reply(message, {
-    attachments: attachments
-  }, function (err, resp) {
-    console.log(err, resp)
-  })
-})
+//  bot.reply(message, {
+//    attachments: attachments
+//  }, function (err, resp) {
+//    console.log(err, resp)
+//  })
+//})
 
 controller.hears('.*', ['direct_message', 'direct_mention'], function (bot, message) {
   bot.reply(message, 'Sorry <@' + message.user + '>, I don\'t understand. \n')
