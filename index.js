@@ -12,6 +12,16 @@ var bot = controller.spawn({
   token: slackToken
 })
 
+var slackWrapi = require('slack-wrapi');
+// A wrapped client from https://github.com/wrapi/slack that let us access advanced data API https://api.slack.com/methods
+var client = new slackWrapi(slackToken);
+
+client.channels.list({exclude_archived:1}, function(err, data) {
+  if (!err) {
+    console.log(data);
+  } 
+});
+
 bot.startRTM(function (err, bot, payload) {
   if (err) {
     throw new Error('Could not connect to Slack')
