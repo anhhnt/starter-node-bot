@@ -43,7 +43,7 @@ controller.hears(['soha.vn', 'thanhnien.vn', 'tinhte.vn', 'genk.vn', 'news.zing.
   bot.reply(message, 'Đừng có post báo vào đây nữa, post vào hotnew ấy!!!');
 });
 
-controller.hears(['facebook * là gì'], ['direct_mention', 'mention', 'direct_message'], function (bot, message) {
+controller.hears(['facebook'], ['direct_mention', 'mention', 'direct_message'], function (bot, message) {
   bot.reply(message, 'Face của em nè : https://www.facebook.com/larrie.opt');
 });
 
