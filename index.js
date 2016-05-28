@@ -31,9 +31,9 @@ controller.hears(['hello', 'hi'], ['direct_mention'], function (bot, message) {
 //  bot.reply(message, 'It\'s nice to talk to you directly.')
 //})
 
-//controller.hears('.*', ['mention'], function (bot, message) {
-//  bot.reply(message, 'You really do care about me. :heart:')
-//})
+controller.hears('.*', ['mention'], function (bot, message) {
+  bot.reply(message, 'Cưng gọi gì chị vậy <3')
+})
 
 controller.hears(['sinh to', 'cafe', 'mua nước'], ['ambient'], function (bot, message) {
   bot.reply(message, 'Sinh tố Đại phúc, gọi số này : 090 6807915, tự mua đi đừng kêu e mua dùm nữa');
@@ -43,7 +43,7 @@ controller.hears(['soha.vn', 'thanhnien.vn', 'tinhte.vn', 'genk.vn', 'news.zing.
   bot.reply(message, 'Đừng có post báo vào đây nữa, post vào hotnew ấy!!!');
 });
 
-controller.hears(['facebook'], ['direct_mention', 'mention', 'direct_message'], function (bot, message) {
+controller.hears(['facebook .* là gì'], [ 'mention', 'direct_mention', 'direct_message'], function (bot, message) {
   bot.reply(message, 'Face của em nè : https://www.facebook.com/larrie.opt');
 });
 
