@@ -31,12 +31,12 @@ controller.hears(['hello', 'hi'], ['direct_mention'], function (bot, message) {
 //  bot.reply(message, 'It\'s nice to talk to you directly.')
 //})
 
-controller.hears('.*', ['mention'], function (bot, message) {
+controller.hears('.*', ['mention','direct_mention', 'direct_message'], function (bot, message) {
   bot.reply(message, 'Cưng gọi gì chị vậy <3')
 })
 
 controller.hears(['sinh to', 'cafe', 'mua nước'], ['ambient'], function (bot, message) {
-  bot.reply(message, 'Sinh tố Đại phúc, gọi số này : 090 6807915, tự mua đi đừng kêu e mua dùm nữa');
+  bot.reply(message, 'Sinh tố Đại phúc, gọi số này : 090 6807915, tự mua đi');
 });
 
 controller.hears(['soha.vn', 'thanhnien.vn', 'tinhte.vn', 'genk.vn', 'news.zing.vn', 'vnexpress.net'], ['ambient'], function (bot, message) {
