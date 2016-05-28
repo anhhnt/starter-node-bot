@@ -16,7 +16,7 @@ var slackWrapi = require('slack-wrapi');
 // A wrapped client from https://github.com/wrapi/slack that let us access advanced data API https://api.slack.com/methods
 var client = new slackWrapi(slackToken);
 
-var Watcher = require 'rss-watcher';
+var Watcher = require('rss-watcher');
 var feedUrl = 'http://xkcn.info/rss';
 
 var watcher = new Watcher(feedUrl);
