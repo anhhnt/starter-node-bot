@@ -19,11 +19,11 @@ bot.startRTM(function (err, bot, payload) {
 })
 
 controller.on('bot_channel_join', function (bot, message) {
-  bot.reply(message, "I'm here!")
+  bot.reply(message, "Chào mọi người <3 !!")
 })
 
 controller.hears(['hello', 'hi'], ['direct_mention'], function (bot, message) {
-  bot.reply(message, 'Hello.')
+  bot.reply(message, 'Hi!')
 })
 
 controller.hears(['hello', 'hi'], ['direct_message'], function (bot, message) {
@@ -36,15 +36,15 @@ controller.hears('.*', ['mention'], function (bot, message) {
 })
 
 controller.hears(['sinh to', 'cafe', 'mua nước'], ['ambient'], function (bot, message) {
-  console.log(bot);
-  console.log(message);
-  bot.reply(message, 'sinh to day tu goi di nhe 090 6807915');
+  bot.reply(message, 'Sinh tố Đại phúc, gọi số này : 090 6807915, tự mua đi đừng kêu e mua dùm nữa');
 });
 
 controller.hears(['soha.vn', 'thanhnien.vn', 'tinhte.vn', 'genk.vn', 'news.zing.vn', 'vnexpress.net'], ['ambient'], function (bot, message) {
-  console.log(bot);
-  console.log(message);
   bot.reply(message, 'Đừng có post báo vào đây nữa, post vào hotnew ấy!!!');
+});
+
+controller.hears(['facebook * là gì'], ['ambient'], function (bot, message) {
+  bot.reply(message, 'Face của em nè : https://www.facebook.com/larrie.opt');
 });
 
 controller.hears('help', ['direct_message', 'direct_mention'], function (bot, message) {
