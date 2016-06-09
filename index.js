@@ -51,8 +51,8 @@ controller.hears(['hello', 'hi'], ['direct_mention'], function (bot, message) {
 //  bot.reply(message, 'It\'s nice to talk to you directly.')
 //})
 
-controller.hears('sinh nhật Phan', ['mention','direct_mention', 'direct_message'], function (bot, message) {
-  bot.reply(message, 'Chị chúc mừng sinh nhật pé Phan nhoa <3!!')
+controller.hears('sinh nhật', ['mention','direct_mention', 'direct_message'], function (bot, message) {
+  bot.reply(message, 'Chị chúc mừng sinh nhật pé Bình nhoa <3!!')
 })
 
 controller.hears(['sinh to', 'cafe', 'mua nước'], ['ambient'], function (bot, message) {
