@@ -63,6 +63,10 @@ controller.hears(['soha.vn', 'thanhnien.vn', 'tinhte.vn', 'genk.vn', 'news.zing.
   bot.reply(message, 'Đừng có post báo vào đây nữa, post vào hotnew ấy!!!');
 });
 
+controller.hears(['xkcn.info', 'pinterest.com', 'tumblr.com', 'instagram.com', 'flickr.com'], ['ambient'], function (bot, message) {
+  bot.reply(message, 'Địt mẹ bố đứa nào cứ post ảnh vào đây thế hả, cái box beauties xinh ra đễ làm gì!!!');
+});
+
 controller.hears(['facebook .* là gì'], [ 'mention', 'direct_mention', 'direct_message'], function (bot, message) {
   bot.reply(message, 'Face của em nè : https://www.facebook.com/larrie.opt');
 });
